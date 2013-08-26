@@ -1,7 +1,9 @@
 Status::Application.routes.draw do
   devise_for :admins
 
-  get '/sites/:id' => 'sites#status'
+  scope '/api/' do
+    resources :sites
+  end
 
   root 'pages#index'
   # The priority is based upon order of creation: first created -> highest priority.

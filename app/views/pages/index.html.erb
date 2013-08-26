@@ -1,6 +1,6 @@
-<div ng-app>
+<div ng-app="Sites">
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-6" ng-controller="SitesCtrl">
       <table class="table">
         <caption>Sites</caption>
         <thead>
@@ -11,13 +11,11 @@
           </tr>
         </thead>
         <tbody>
-          <% @sites.each do |site| %>
-            <tr>
-              <td><%= site.name %></td>
-              <td><%= site.url %></td>
-              <td><button type="button" class="btn btn-default"><%= site.status %><span class="glyphicon glyphicon-star"></span></button></td>
-            </tr>
-          <% end %>
+          <tr ng-repeat="site in sites">
+            <td>{{ site.name }}</td>
+            <td>{{ site.url }}</td>
+            <td>{{ site.status }}</td>
+          </tr>
         </tbody>
       </table>
     </div>
