@@ -14,7 +14,7 @@
           <tr ng-repeat="site in sites">
             <td>{{ site.name }}</td>
             <td>{{ site.url }}</td>
-            <td>{{ site.status }}</td>
+            <td><button type="button" class="btn" ng-class="{ 'btn-success': site.status=='Up', 'btn-danger': site.status=='Down'}"><span class="glyphicon" ng-class="{ 'glyphicon-arrow-up': site.status=='Up', 'glyphicon-arrow-down': site.status=='Down'}"></span></button></td>
           </tr>
         </tbody>
       </table>
