@@ -56,4 +56,5 @@ Status::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  #get '/fonts/*path', to: redirect {|params, req| "/assets/fonts/#{params[:path]}" }, format: false
 end
