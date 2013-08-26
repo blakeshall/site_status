@@ -1,0 +1,25 @@
+<div ng-app>
+  <div class="row">
+    <div class="col-md-6">
+      <table class="table">
+        <caption>Sites</caption>
+        <thead>
+          <tr>
+            <th>Site</th>
+            <th>URL</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @sites.each do |site| %>
+            <tr>
+              <td><%= site.name %></td>
+              <td><%= site.url %></td>
+              <td><button type="button" class="btn btn-default"><%= site.status %></button></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
