@@ -1,23 +1,25 @@
 <div ng-app="Sites">
   <div class="row">
-    <div class="col-md-6" ng-controller="SitesCtrl">
+    <div class="col-md-6 col-md-offset-3" ng-controller="SitesCtrl">
+      <h1>Site Status</h1>
+      <div class="table-responsive">
       <table class="table">
-        <caption>Sites</caption>
         <thead>
           <tr>
             <th>Site</th>
-            <th>URL</th>
+            <th class="hidden-xs">URL</th>
             <th>Status</th>
           </tr>
         </thead>
         <tbody>
           <tr ng-repeat="site in sites">
             <td>{{ site.name }}</td>
-            <td>{{ site.url }}</td>
+            <td class="hidden-xs">{{ site.url }}</td>
             <td><button type="button" class="btn" ng-class="{ 'btn-success': site.status=='Up', 'btn-danger': site.status=='Down'}"><span class="glyphicon" ng-class="{ 'glyphicon-arrow-up': site.status=='Up', 'glyphicon-arrow-down': site.status=='Down'}"></span></button></td>
           </tr>
         </tbody>
       </table>
+      </div>
     </div>
   </div>
 </div>
